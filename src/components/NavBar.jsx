@@ -1,44 +1,24 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React from 'react';
 import '../styles/NavBar.css';
-import CartWidget from './CartWidget';
-import logo from '../assets/logo.png';
+import { CartWidget } from './CartWidget';
+import { Categories } from './Categories';
 
-const NavBar = () => {
+export const Navbar = () => {
   return (
-    <nav className="navbar navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <div className="d-flex justify-content-between align-items-center w-100">
-          <div>
-            <a className="navbar-logo" href="#">
-              <img src={logo} alt="Logo" className="logo"/>
-            </a>
-          </div>
-
-          <div className="d-flex align-items-center">
-            <ul className="navbar-nav flex-row">
-              <li className="nav-item custom-margin">
-                <a className="nav-link" href="#">Velas</a>
-              </li>
-              <li className="nav-item custom-margin">
-                <a className="nav-link" href="#">Sahumerios</a>
-              </li>
-              <li className="nav-item custom-margin">
-                <a className="nav-link" href="#">Inciensos</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="d-flex align-items-center ml-auto">
-            <div className="mr-2">
-              <input type="text" placeholder="Buscar..." className="form-control size-input" />
-            </div>
-            <a className="nav-link size-cart" href="#"><CartWidget/></a>
-          </div>
+        <div className="navbar-brand">LOGO</div>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Categories />
+            </li>
+          </ul>
+          <CartWidget />
         </div>
       </div>
     </nav>
   );
 }
 
-export default NavBar;

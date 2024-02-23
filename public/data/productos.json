@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "title": "Sahumerio Vainilla",
+        "price": 150,
+        "stock": 10,
+        "img": "1.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 2,
+        "title": "Sahumerio Canela",
+        "price": 150,
+        "stock": 10,
+        "img": "2.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 3,
+        "title": "Sahumerio Sandalo",
+        "price": 150,
+        "stock": 15,
+        "img": "3.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 4,
+        "title": "Sahumerio Jazmin",
+        "price": 150,
+        "stock": 15,
+        "img": "4.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 5,
+        "title": "Sahumerio Coco",
+        "price": 150,
+        "stock": 20,
+        "img": "5.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 6,
+        "title": "Sahumerio Lavanda",
+        "price": 150,
+        "stock": 20,
+        "img": "6.jpg",
+        "category": "sahumerio"
+    },
+    {
+        "id": 7,
+        "title": "Vela Vainilla",
+        "price": 150,
+        "stock": 20,
+        "img": "7.jpg",
+        "category": "vela"
+    },
+    {
+        "id": 8,
+        "title": "Vela Uva",
+        "price": 150,
+        "stock": 20,
+        "img": "8.jpg",
+        "category": "vela"
+    },
+    {
+        "id": 9,
+        "title": "Vela Cedron",
+        "price": 150,
+        "stock": 15,
+        "img": "9.jpg",
+        "category": "vela"
+    },
+    {
+        "id": 10,
+        "title": "Vela Eucalipto",
+        "price": 150,
+        "stock": 15,
+        "img": "10.jpg",
+        "category": "vela"
+    },
+    {
+        "id": 11,
+        "title": "Vela Bamboo",
+        "price": 150,
+        "stock": 15,
+        "img": "11.jpg",
+        "category": "vela"
+    },
+    {
+        "id": 12,
+        "title": "Vela Citronella",
+        "price": 150,
+        "stock": 20,
+        "img": "7.jpg",
+        "category": "vela"
+    }
+
+
+
+
+]

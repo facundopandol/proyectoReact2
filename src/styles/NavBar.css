@@ -5,12 +5,10 @@
 .navbar-light {
 background: linear-gradient(to right, #ff9966, #ff5e62) }
 
-.size-input {
-    width: 180px;
-}
+
 
 .size-cart {
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 20px;
 }
 
@@ -39,3 +37,4 @@ background: linear-gradient(to right, #ff9966, #ff5e62) }
     text-shadow: black;
     border-radius: 5px;
 }
+
