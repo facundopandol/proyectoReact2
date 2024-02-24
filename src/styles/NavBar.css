@@ -38,3 +38,6 @@ background: linear-gradient(to right, #ff9966, #ff5e62) }
     border-radius: 5px;
 }
 
+.nav-item:hover .nav-link {
+    font-weight: bold;
+}
