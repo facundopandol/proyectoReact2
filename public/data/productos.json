@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Sahumerio Vainilla",
-        "description": "Aroma a vainilla que ayuda a la concentración y al trabajo",
+        "description": "Aroma a vainilla que ayuda a la concentración y al trabajo.",
         "price": 150,
         "stock": 10,
         "img": "1.jpg",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "title": "Sahumerio Canela",
-        "description": "Aroma a canela para la inspiraciòn y la alegria",
+        "description": "Aroma a canela para la inspiraciòn y la alegria.",
         "price": 150,
         "stock": 10,
         "img": "2.jpg",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "title": "Sahumerio Sandalo",
-        "description": "Ayuda a ",
+        "description": "Ayuda a las buenas energias y a limpieza del ambiente.",
         "price": 150,
         "stock": 15,
         "img": "3.jpg",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "title": "Sahumerio Jazmin",
-        "description": "Aroma a flores de jazmin que brinda paz y tranquilidad",
+        "description": "Aroma a flores de jazmin que brinda paz y tranquilidad.",
         "price": 150,
         "stock": 15,
         "img": "4.jpg",
@@ -38,6 +38,7 @@
     {
         "id": 5,
         "title": "Sahumerio Coco y Vainilla",
+        "description": "Aroma a coco con notas de vainilla, ayuda a la concentraciòn.",
         "price": 150,
         "stock": 20,
         "img": "5.jpg",
@@ -46,6 +47,7 @@
     {
         "id": 6,
         "title": "Sahumerio Lavanda",
+        "description": "Aroma a flores de lavanda para la armonia y la calma.",
         "price": 150,
         "stock": 20,
         "img": "6.jpg",
@@ -54,6 +56,7 @@
     {
         "id": 7,
         "title": "Vela Vainilla",
+        "description": "Vela con aroma a vainilla para el trabajo y la claridad mental.",
         "price": 150,
         "stock": 20,
         "img": "7.jpg",
@@ -62,6 +65,7 @@
     {
         "id": 8,
         "title": "Vela Uva",
+        "description": "Vela con aroma a uva para la cordialidad y la templanza.",
         "price": 150,
         "stock": 20,
         "img": "8.jpg",
@@ -70,6 +74,7 @@
     {
         "id": 9,
         "title": "Vela Cedron",
+        "description": "Vela con aroma a cedron para alejar malas energias y atraer felicidad.",
         "price": 150,
         "stock": 15,
         "img": "9.jpg",
@@ -78,6 +83,7 @@
     {
         "id": 10,
         "title": "Vela Eucalipto",
+        "description": "Vela con aroma a eucalipto que transmite paz y tranquilidad.",
         "price": 150,
         "stock": 15,
         "img": "10.jpg",
@@ -86,6 +92,7 @@
     {
         "id": 11,
         "title": "Vela Bamboo",
+        "description": "Vela con aroma al bamboo para las buenas energias y la salud del alma.",
         "price": 150,
         "stock": 15,
         "img": "11.jpg",
@@ -94,6 +101,7 @@
     {
         "id": 12,
         "title": "Vela Citronella",
+        "description": "Vela con aroma a citronella para atraer armonia, paz y tranquilidad.",
         "price": 150,
         "stock": 20,
         "img": "7.jpg",
