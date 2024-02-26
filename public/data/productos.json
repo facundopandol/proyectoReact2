@@ -38,7 +38,7 @@
     {
         "id": 5,
         "title": "Sahumerio Coco y Vainilla",
-        "description": "Aroma a coco con notas de vainilla, ayuda a la concentraciòn.",
+        "description": "Aroma a coco con notas de vainilla para la paz interior.",
         "price": 150,
         "stock": 20,
         "img": "5.jpg",
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "title": "Vela Cedron",
-        "description": "Vela con aroma a cedron para alejar malas energias y atraer felicidad.",
+        "description": "Vela con aroma a cedron para limpieza de malas energias.",
         "price": 150,
         "stock": 15,
         "img": "9.jpg",
@@ -92,7 +92,7 @@
     {
         "id": 11,
         "title": "Vela Bamboo",
-        "description": "Vela con aroma al bamboo para las buenas energias y la salud del alma.",
+        "description": "Vela con aroma al bamboo para las buenas energias y la salud.",
         "price": 150,
         "stock": 15,
         "img": "11.jpg",
@@ -101,7 +101,7 @@
     {
         "id": 12,
         "title": "Vela Citronella",
-        "description": "Vela con aroma a citronella para atraer armonia, paz y tranquilidad.",
+        "description": "Vela con aroma a citronella para atraer armonia y paz.",
         "price": 150,
         "stock": 20,
         "img": "7.jpg",

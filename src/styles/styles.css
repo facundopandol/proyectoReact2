@@ -21,7 +21,9 @@ body {
 .item-card {
     background: linear-gradient(to right, #ff9966, #ff5e62);
     width: 30%;
-    margin: 0 auto;
+    margin: 1% auto;
+    border-radius: 2%;
+    border-top: 5%;
 }
 
 .item-card img {
