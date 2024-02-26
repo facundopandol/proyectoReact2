@@ -9,11 +9,13 @@ export const Item = ({ product }) => {
             <h2 className="text-xs font-bold mb-2">{product.title} </h2>
             <p className="text-xs font-bold xs-1">{product.description}</p>
             <p className="text-xl mb-2">Precio: ${product.price}</p>
-            <Link to={`/product/${product.id}`}>
-                <button className="text-black px-4 py-2 rounded-md focus:outline">
-                    Ver producto
-                </button>
-            </Link>
+            <div className="text-center">
+                <Link to={`/product/${product.id}`}>
+                    <button className="text-black px-4 py-2 rounded-md">
+                        Ver producto
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 };
