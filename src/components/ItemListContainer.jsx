@@ -17,7 +17,7 @@ export const ItemListContainer = () => {
                     setProducts(prods);
                 }
             })
-            .catch(error => console.error("Error fetching data:", error));
+            .catch(error => console.error("Error", error));
     }, [cid]);
 
     return (
