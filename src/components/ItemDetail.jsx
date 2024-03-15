@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 import { useCounter } from "../hooks/useCounter";
 import '../styles/styles.css'
+import { useCarritoContext } from "../context/CartContext";
 
 
 export const ItemDetail = ({ item }) => {
+    const {addItem} = useCarritoContext()
     const { count, increment, decrement, reset } = useCounter(1, item.stock, 1)
 
     const handleAddToCart = () => {
-        console.log("Producto agregado al carrito")
+        addItem(item, count)
     }
 
     return (
         <div className="fixed w-full h-full flex items-center justify-center z-50">
-            <div className= "bg-black bg-opacity-50">
+
                 <div className="bg-black p-8 rounded-lg">
                 <Link to={'/'}>
                         <button className="text-black-700 hover:text-black-900">X</button>
@@ -32,6 +34,9 @@ export const ItemDetail = ({ item }) => {
                                 <button className="text-black px-4 py-2 rounded" onClick={increment}>
                                     +
                                 </button>
+                                <button className="text-black px-4 py-2 rounded" onClick={reset}>
+                                    Reset
+                                </button>
                                 <button className="text-black px-4 py-2 rounded" onClick={handleAddToCart}>
                                     Agregar al carrito
                                 </button>
@@ -39,7 +44,6 @@ export const ItemDetail = ({ item }) => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

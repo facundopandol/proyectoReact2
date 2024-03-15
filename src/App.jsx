@@ -7,9 +7,12 @@ import { Cart } from './components/Cart'
 import { Checkout } from './components/Checkout'
 import { ItemDetailsContainer } from './components/ItemDetailsContainer'
 import { NotFound } from './components/NotFound'
+import { CarritoProvider } from './context/CartContext'
+
 export const App = () => {
   return (
     <BrowserRouter>
+    <CarritoProvider>
       <Navbar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
@@ -20,6 +23,7 @@ export const App = () => {
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
+      </CarritoProvider>
     </BrowserRouter>
 
   )
