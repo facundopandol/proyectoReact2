@@ -20,7 +20,7 @@ export const ItemDetail = ({ item }) => {
                         <button className="text-black-700 hover:text-black-900">X</button>
                     </Link>
                     <div className="w-full h-full flex items-center justify-center text-center item-card">
-                    <img className="w-full h-64 object-cover mb-6" src={`../img/${item.img}`} alt={`Imagen de ${item.title}`} />
+                    <img className="w-full h-64 object-cover mb-6" src={`${item.img}`} alt={`Imagen de ${item.title}`} />
                         <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
                         <p className="text-gray-700 mb-2 font-semibold">{item.description}</p>
                         <p className="text-gray-700 mb-2 font-semibold">Stock: {item.stock}</p>

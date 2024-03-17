@@ -1,28 +1,27 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ItemList } from "./ItemList";
+import { getProducts } from "../firebase/firebase";
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const { cid } = useParams();
 
     useEffect(() => {
-        fetch("../data/productos.json")
-            .then(response => response.json())
+        getProducts()
             .then(prods => {
                 if (cid) {
-                    const productosFiltrados = prods.filter(prod => prod.category === cid);
-                    setProducts(productosFiltrados);
+                    const productosFiltrados = prods.filter(prod => prod.category === cid)
+                    setProducts(productosFiltrados)
                 } else {
-                    setProducts(prods);
+                    setProducts(prods)
                 }
             })
-            .catch(error => console.error("Error", error));
-    }, [cid]);
-
+            .catch((error) => console.log(error))
+    }, [cid])
     return (
         <div>
-            <ItemList products={products} />
+            <ItemList products={products} plantilla="Item"/>
         </div>
     );
-};
+}

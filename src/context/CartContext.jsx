@@ -19,7 +19,7 @@ export const CarritoProvider = (props) => { // forma de proveer el contexto
         if (isInCart(item.id)) {
             const indice = carrito.findIndex(prod => prod.id === item.id)
             const aux = [...carrito]
-            aux[indice].quantity = cantidad
+            aux[indice].quantity += cantidad;
             setCarrito(aux)
         } else {
             const newItem = {
@@ -30,6 +30,9 @@ export const CarritoProvider = (props) => { // forma de proveer el contexto
         }
     }
 
+
+
+    
     //borrar producto
     const removeItem = (id) => {
         setCarrito(carrito.filter(prod => prod.id !== id))
@@ -56,9 +59,9 @@ export const CarritoProvider = (props) => { // forma de proveer el contexto
 
     //precio total
     const totalPrice = () => {
-        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price))
+        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price), 0);
     }
-
+    
     return (
         <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice }}>
         {props.children}

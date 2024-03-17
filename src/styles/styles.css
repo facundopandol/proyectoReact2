@@ -41,3 +41,28 @@ button:hover {
     background-color: #ccc; 
 }
 
+
+.producto-carrito {
+    display: flex;
+    align-items: center;
+}
+
+.img-producto-carrito {
+    width: 10%; 
+    height: auto; 
+    margin-right: 20px; 
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+}
+
+.detalles {
+    flex: 1;
+}
+
+.botones-cart {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}

@@ -1,16 +1,22 @@
 import React from 'react';
 import { Item } from './Item';
+import { ItemCart } from './ItemCart';
 
-export const ItemList = ({ products }) => {
+export const ItemList = ({ products, plantilla }) => {
+    
     return (
-        <div className="container">
-            <div className="row row-cols-1 row-cols-md-3 gx-8">
-                {products.map(prod => (
-                    <div className="col" key={prod.id}>
-                        <Item product={prod} />
-                    </div>
-                ))}
-            </div>
-        </div>
+
+        <>
+            {
+                plantilla === 'Item'
+                    ?
+                    products.map(prod => <Item key={prod.id} product={prod} />)
+                    :
+                    products.map(prod => <ItemCart key={prod.id} product={prod} />)
+            
+            }
+            
+        </>
+
     );
-};
+}

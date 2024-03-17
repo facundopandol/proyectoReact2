@@ -14,7 +14,7 @@ export const Checkout = () => {
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
-                <form onSubmit={handleSubmit} ref={formRef}>
+                <form action="" onSubmit={handleSubmit} ref={formRef}>
                     <div className="mb-3">
                         <label className="block text-gray-700 mb-1">Nombre:</label>
                         <input type="text" className="w-full p-2 border rounded-md" name="nombre" />
