@@ -139,7 +139,6 @@ export const createProducts = async () => {
     })
 }
 
-
 //consultar productos
 export const getProducts = async () => {
     const productos = await getDocs(collection(bdd, "productos"))
@@ -157,7 +156,6 @@ export const getProduct = async (id) => {
 
 export const updateProduct = async (id, info) => {
     const respuesta = await updateDoc(doc(bdd, "productos", id), info)
-    return respuesta
 }
 
 
@@ -165,14 +163,5 @@ export const updateProduct = async (id, info) => {
 
 export const deleteProduct = async (id) => {
     const respuesta = await deleteDoc(doc(bdd, "productos", id))
-    return respuesta
 }
 
-updateProduct("74LGGin9TTY0ioscY2af", {
-    "title": "Sahumerio Coco y Vainilla",
-    "description": "Aroma a coco con notas de vainilla para la paz interior.",
-    "price": 150,
-    "stock": 20,
-    "img": "https://firebasestorage.googleapis.com/v0/b/react-js-c32a4.appspot.com/o/5.jpg?alt=media&token=d8855f27-ce57-4b50-ade1-88d09273c770",
-    "category": "sahumerio"
-})
