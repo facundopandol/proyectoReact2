@@ -10,11 +10,12 @@ export const ItemListContainer = () => {
     useEffect(() => {
         getProducts()
             .then(prods => {
+                const productos = prods.filter(prod => prod.stock > 0)
                 if (cid) {
-                    const productosFiltrados = prods.filter(prod => prod.category === cid)
+                    const productosFiltrados = productos.filter(prod => prod.category == cid)
                     setProducts(productosFiltrados)
                 } else {
-                    setProducts(prods)
+                    setProducts(productos)
                 }
             })
             .catch((error) => console.log(error))
