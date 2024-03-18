@@ -109,7 +109,7 @@ export const Checkout = () => {
                                     <label className="block text-gray-700 mb-1">Telefono:</label>
                                     <input type="text" className="w-full p-2 border rounded-md" name="telefono" />
                                 </div>
-                                <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded-md">Finalizar</button>
+                                <button type="submit" className="w-full p-2 bg-blue-500 text-black rounded-md">Confirmar Compra</button>
                             </form>
                         </div>
                     </div>
