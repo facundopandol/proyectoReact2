@@ -1,73 +1,68 @@
 import { useState, createContext, useContext } from "react";
 
-const CarritoContext = createContext() // creando el contexto
+const CarritoContext = createContext(); // creando el contexto
 
-export const useCarritoContext = () => useContext(CarritoContext) //funcion para consultar mi context
+export const useCarritoContext = () => useContext(CarritoContext); // función para consultar mi context
 
 export const CarritoProvider = (props) => { // forma de proveer el contexto
 
-    const [carrito, setCarrito] = useState([])
+    const [carrito, setCarrito] = useState([]);
 
     //buscar producto
     const isInCart = (id) => {
-        return carrito.some(prod => prod.id === id)
+        return carrito.some(prod => prod.id === id);
     }
 
-
-    //agregar producto
+    // agregar producto
     const addItem = (item, cantidad) => {
         if (isInCart(item.id)) {
-            const indice = carrito.findIndex(prod => prod.id === item.id)
-            const aux = [...carrito]
+            const indice = carrito.findIndex(prod => prod.id === item.id);
+            const aux = [...carrito];
             aux[indice].quantity += cantidad;
-            setCarrito(aux)
+            setCarrito(aux);
         } else {
             const newItem = {
                 ...item, //copiar objeto en js
                 quantity: cantidad
-            }
-            setCarrito([...carrito, newItem]) //guardo en el carrito el nuevo producto
+            };
+            setCarrito([...carrito, newItem]); //guardo en el carrito el nuevo producto
         }
     }
 
-
-
-    
-    //borrar producto
+    // borrar producto
     const removeItem = (id) => {
-        setCarrito(carrito.filter(prod => prod.id !== id))
-
-        /*    const aux = [...carrito]
-            const indice = aux.findIndex (prod => prod.id === id)
-        
-            if (indice!= -1) {
-                setCarrito (aux.splice(indice,1))
-            }
-        */
+        setCarrito(carrito.filter(prod => prod.id !== id));
     }
 
-    //vaciar carrito
+    // vaciar carrito
     const emptyCart = () => {
-        setCarrito([])
+        setCarrito([]);
     }
 
-    //cantidad de productos
+    // cantidad de productos
     const getItemQuantity = () => {
-        return carrito.reduce((acum, prod) => acum += prod.quantity, 0)
+        return carrito.reduce((acum, prod) => acum += prod.quantity, 0);
     }
 
-
-    //precio total
+    // precio total
     const totalPrice = () => {
         return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.price), 0);
     }
-    
+
+    // actualizar producto
+    const updateItem = (id, newQuantity) => {
+        const updatedCart = carrito.map(item => {
+            if (item.id === id) {
+                return { ...item, quantity: newQuantity };
+            }
+            return item;
+        });
+        setCarrito(updatedCart);
+    }
+
     return (
-        <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice }}>
-        {props.children}
+        <CarritoContext.Provider value={{ carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice, updateItem }}>
+            {props.children}
         </CarritoContext.Provider>
     )
-
-
-
 }

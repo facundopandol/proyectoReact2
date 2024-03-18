@@ -14,6 +14,7 @@ export const ItemCart = ({ product }) => {
                 <p className="text-sm">{product.description}</p>
             </div>
             <div className="botones-cart">
+
                 <button className="text-black px-4 py-2 rounded" onClick={async () => {
                     updateItem(product.id, count - 1)
                     decrement()

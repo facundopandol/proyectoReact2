@@ -17,7 +17,7 @@ export const ItemDetail = ({ item }) => {
 
                 <div className="bg-black p-8 rounded-lg">
                 <Link to={'/'}>
-                        <button className="text-black-700 hover:text-black-900">X</button>
+                        <button className="text-black-700 hover:text-black-900">Cerrar</button>
                     </Link>
                     <div className="w-full h-full flex items-center justify-center text-center item-card">
                     <img className="w-full h-64 object-cover mb-6" src={`${item.img}`} alt={`Imagen de ${item.title}`} />

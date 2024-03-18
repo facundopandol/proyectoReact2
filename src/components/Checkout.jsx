@@ -1,16 +1,46 @@
 import { useRef } from "react";
+import { useCarritoContext } from "../context/CartContext.jsx";
+import { Link, useNavigate } from "react-router-dom";
+import { createOrdenCompra, getOrdenCompra, getProduct, updateProduct } from "../firebase/firebase.js";
 
 export const Checkout = () => {
     const formRef = useRef();
+    const navigate = useNavigate() // devuelve la locación actual de mi componente (ruta)
+    const { carrito, totalPrice, emptyCart } = useCarritoContext()
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const datForm = new FormData(formRef.current); // formulario HTML a objeto iterator
-        const data = Object.fromEntries(datForm); // objeto iterator a objeto simple
-        console.log(data);
-        e.target.reset();
-    };
+        const cliente = Object.fromEntries(datForm); // objeto iterator a objeto simple
 
+        // generar la orden de compra
+
+
+
+        //modificar stock
+        const aux = [...carrito]
+
+        aux.forEach(prodCarrito => {
+            getProduct(prodCarrito.id).then(prodBDD => {
+                if (prodBDD.stock >= prodCarrito.quantity) {
+                    prodBDD.stock -= prodCarrito.quantity
+                    updateProduct(prodBDD.id, prodBDD)
+                } else {
+                    console.log(`El stock del producto con ${prodBDD.title} no se puede comprar porque no tiene stock suficiente`)
+                    aux.filter(prod => prod.id != prodBDD.id) // elimino el producto del carrito al no tener stock suficiente
+                }
+            })
+        })
+
+
+        const aux2 = aux.map(prod => ({ id: prod.id, quantity: prod.quantity, price: prod.price }))
+
+        createOrdenCompra(cliente, totalPrice(), aux2, new Date().toLocaleDateString('es-AR', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }))
+            .then(ordenCompra => console.log(`Gracias por comprar con nosotros ${ordenCompra.id}`))
+        emptyCart()
+        e.target.reset();
+        navigate('/')
+    }
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">

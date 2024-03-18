@@ -155,13 +155,33 @@ export const getProduct = async (id) => {
 // Actualizar productos
 
 export const updateProduct = async (id, info) => {
-    const respuesta = await updateDoc(doc(bdd, "productos", id), info)
+    await updateDoc(doc(bdd, "productos", id), info)
 }
 
 
 // eliminar producto
 
 export const deleteProduct = async (id) => {
-    const respuesta = await deleteDoc(doc(bdd, "productos", id))
+    await deleteDoc(doc(bdd, "productos", id))
 }
 
+
+//CREATE AND READ Ordenes de compra
+
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+const ordenCompra= await addDoc(collection(bdd, "ordenesCompra"), {
+    cliente: cliente,
+    items: carrito,
+    precioTotal: precioTotal,
+    fecha: fecha
+})
+
+return ordenCompra
+
+}
+
+export const getOrdenCompra = async (id) => {
+    const ordenCompra = await getDoc(doc(bdd, "ordenesCompra", id))
+    const item = {...ordenCompra.data(), id: ordenCompra.id}
+    return item
+}
